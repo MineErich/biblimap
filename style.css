@@ -34,7 +34,6 @@ body {
     margin-top: 2%;
     margin-bottom: 2%;
     background-color: #6464b980;
-    color: black;
     border: 2px solid #6464b9;
     border-radius: 12px;
     padding: 3%;
@@ -101,26 +100,6 @@ body {
     z-index: 10;
 }
 
-.location_li {
-    display: inline;
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.location_li a, a:hover, a:visited {
-    text-decoration: underline;
-    color: white;
-    cursor: pointer;
-}
-
-.location_li img {
-    height: 1.5em;
-}
-
 #location_text {
     font-weight: bold;
 }
@@ -132,12 +111,7 @@ body {
         width: 100vw;
 
     }
-    .location_li {
-        padding: 3px 16px;
-        float: none;
-    }
     .header p, .header div, .header a {
-        /* text-align: center; */
         padding: 3px 16px;
         text-decoration: none;
     }
@@ -155,7 +129,6 @@ body {
 
 /* START darkmode */
 .darkmode {
-    /* background-color: #000000; */
     background-color: rgb(19, 23, 31);
 }
 

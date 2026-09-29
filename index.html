@@ -46,7 +46,6 @@
                     if (day == 6 && hour >= 9 && hour < 16)
                         return true;
                     return false;
-                    break;
 
                 case "r1": /* mo-fr 8-22 sa-so 10-20 */
                     if (day <= 5 && day >= 1 && hour >= 8 && hour < 22)
@@ -54,7 +53,6 @@
                     if ((day == 6 || day == 0) && hour >= 10 && hour < 20)
                         return true;
                     return false;
-                    break;
 
                 case "r2": /* mo-fr 8-22 sa-so 10-20 */
                     if (day <= 5 && day >= 1 && hour >= 8 && hour < 22)
@@ -62,7 +60,6 @@
                     if ((day == 6 || day == 0) && hour >= 10 && hour < 20)
                         return true;
                     return false;
-                    break;
             }
         }
         function setOpen(bib, element) {

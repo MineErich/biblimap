@@ -65,28 +65,11 @@ function initViewBox() {
     }
 
     let lastTouchDistance = null; // Zur Berechnung der Pinch-Zoom-Stärke
-    let lastTouchCenter = null;
-
-    function getTouchDistance(touches) {
-        const [touch1, touch2] = touches;
-        const dx = touch2.clientX - touch1.clientX;
-        const dy = touch2.clientY - touch1.clientY;
-        return Math.sqrt(dx * dx + dy * dy);
-    }
-
-    function getTouchCenter(touches) {
-        const [touch1, touch2] = touches;
-        return {
-            x: (touch1.clientX + touch2.clientX) / 2,
-            y: (touch1.clientY + touch2.clientY) / 2
-        };
-    }
 
     function touchStart(event) {
         if (event.touches.length === 2) {
             // Initialisiere Pinch-Zoom
             lastTouchDistance = getTouchDistance(event.touches);
-            lastTouchCenter = getTouchCenter(event.touches);
         } else if (event.touches.length === 1) {
             // Initialisiere Panning
             isPanning = true;
@@ -115,7 +98,6 @@ function initViewBox() {
             viewBox.y = svgY - (touchCenter.y - rect.top) / rect.height * viewBox.height;
     
             lastTouchDistance = newDistance;
-            lastTouchCenter = touchCenter;
     
             updateViewBox();
         } else if (event.touches.length === 1 && isPanning) {
@@ -141,7 +123,6 @@ function initViewBox() {
             // Falls keine Finger mehr vorhanden sind, alles zurücksetzen
             isPanning = false;
             lastTouchDistance = null;
-            lastTouchCenter = null;
         }
     }
 
@@ -157,4 +138,19 @@ function initViewBox() {
     svg.addEventListener("touchmove", touchMove, { passive: false });
     svg.addEventListener("touchend", touchEnd);
 
+}
+
+function getTouchDistance(touches) {
+    const [touch1, touch2] = touches;
+    const dx = touch2.clientX - touch1.clientX;
+    const dy = touch2.clientY - touch1.clientY;
+    return Math.hypot(dx * dx + dy * dy);
+}
+
+function getTouchCenter(touches) {
+    const [touch1, touch2] = touches;
+    return {
+        x: (touch1.clientX + touch2.clientX) / 2,
+        y: (touch1.clientY + touch2.clientY) / 2
+    };
 }
