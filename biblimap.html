@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="main.js"></script>
-    <script src="jquery-3.6.0.min.js"></script>
     <script src="viewbox.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -42,7 +41,7 @@
         window.onload = restore_darkmode();
 
         // sanitize URL-params; do AJAX
-        $(document).ready(function () {
+        document.addEventListener("DOMContentLoaded", () => {
             let url = getURL(true, true, false);
             let bib = url['location'];
             let lvl = url['lvl'];
@@ -66,28 +65,32 @@
                 }
                 setURL(false, lvl, false, false);
             }
-            $.ajax({
-                url: 'maps/' + bib + '/' + lvl + 'OG.svg',
-                dataType: 'xml',
-                success: function (data) {
-                    $('#svg-container').empty().append(data.documentElement);
-                    // wenn Seite geladen ist init-function aufrufen
-                    document.addEventListener("DOMContentLoaded", init());
-                },
-                error: function () {
-                    alert('Fehler beim Laden der SVG-Datei: Bitte prüfe, ob der Link korrekt ist. Du wirst zur Startseite zurückgeleitet.');
-                    setURL("HTWK", 0, false, true);
-                }
-            });
-            $(document).ajaxComplete(function () {
+            fetch(`maps/${bib}/${lvl}OG.svg`)
+            .then(response => {
+                if (!response.ok) { throw response }
+                return response.text();
+            })
+            .then(response => {
+                const svgContainer = document.getElementById("svg-container");
+                svgContainer.innerHTML = "";
+                svgContainer.innerHTML = response;
+
+                // wenn Seite geladen ist init-function aufrufen
+                document.addEventListener("DOMContentLoaded", init());
+
                 // Dialog zur Bib-Auswahl definieren
                 initDialog();
                 // SVG bewegbar machen
                 initViewBox();
                 // adjust svg for lightmode / darkmode
                 set_darkmode_svg();
-            });
+            })
+            .catch(e => {
+                alert('Fehler beim Laden der SVG-Datei: Bitte prüfe, ob der Link korrekt ist. Du wirst zur Startseite zurückgeleitet.');
+                setURL("HTWK", 0, false, true);
+            })
         });
+
     </script>
 
     <header class="header" id="header">
