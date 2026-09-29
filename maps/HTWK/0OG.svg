@@ -110,7 +110,7 @@
 <text class="wall" id="text76" style="font-size:26.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1" x="223.1757" xml:space="preserve" y="716.8031"><tspan id="tspan76" x="223.1757" y="716.8031">WC</tspan></text>
 <rect class="rect_chair" height="38.464252" id="S22" style="fill:#0000ff;fill-opacity:1" width="40.907127" x="563.06647" y="344.64456"></rect>
 <rect class="rect_chair" height="42.476761" id="S23" style="fill:#0000ff;fill-opacity:1" width="42.167255" x="379.21237" y="146.27138"></rect>
-<text class="wall" id="text77" style="font-size:26.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#0000ff;fill-opacity:1" x="898.00006" xml:space="preserve" y="341.95984"><tspan id="tspan77" style="writing-mode:tb-rl;fill:#000000" x="635" y="250">SCHLIESSFÄCHER</tspan></text>
+<text class="wall" id="text77" style="font-size:26.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1" x="898.00006" xml:space="preserve" y="341.95984"><tspan id="tspan77" style="writing-mode:tb-rl" x="635" y="250">SCHLIESSFÄCHER</tspan></text>
 <text class="wall" id="text78" style="font-size:26.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1" x="510.73816" xml:space="preserve" y="663.47021"><tspan id="tspan78" x="510.73816" y="663.47021">INFO</tspan><tspan id="tspan79" x="510.73816" y="696.80359">POINT</tspan></text>
 </g>
 </svg>

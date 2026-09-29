@@ -302,7 +302,7 @@
 <rect class="rect_chair" height="3.5924072" id="S160" style="fill:#0000ff" width="3.7646484" x="329" y="196"></rect>
 <rect class="rect_chair" height="3.5924072" id="S161" style="fill:#0000ff" width="3.7646484" x="329" y="212"></rect>
 <rect class="rect_chair" height="3.5924072" id="S162" style="fill:#0000ff" width="3.7646484" x="301" y="183"></rect>
-<rect class="wall" height="31.728426" id="rect131" style="fill:none;stroke:#000000;stroke-width:0.973233;stroke-opacity:1" width="19.655672" x="129.95781" y="112.27666"></rect>
+<rect class="wall" height="31.728426" id="rect131" style="fill:#000000;stroke-width:0.973233;stroke-opacity:1" width="19.655672" x="129.95781" y="112.27666"></rect>
 <text class="wall" id="text131" style="font-size:2.66667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1" x="331.03882" xml:space="preserve" y="186.70435"><tspan id="tspan131" x="331.03882" y="186.70435">WC</tspan></text>
 <text class="wall" id="text131-8" style="font-size:2.66667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1" x="331.73257" xml:space="preserve" y="158.97649"><tspan id="tspan131-9" x="331.73257" y="158.97649">WC</tspan></text>
 </g>

@@ -151,7 +151,7 @@
 <rect class="rect_chair" height="16.207659" id="S28" style="fill:#0000ff;fill-opacity:1" width="30.382769" x="921.83636" y="616.49493"></rect>
 <rect class="rect_chair" height="16.363022" id="S29" style="fill:#0000ff;fill-opacity:1" width="31.214224" x="921.54938" y="684.54449"></rect>
 <rect class="rect_chair" height="16.432865" id="S30" style="fill:#0000ff;fill-opacity:1" width="29.675797" x="772.57556" y="684.86902"></rect>
-<text class="wall" id="text124" style="font-size:26.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1" x="856.59521" xml:space="preserve" y="810.53357"><tspan id="tspan124" sodipodi:role="line" style="fill:#000000" x="856.59521" y="810.53357">4. ETAGE</tspan></text>
+<text class="wall" id="text124" style="font-size:26.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1" x="856.59521" xml:space="preserve" y="810.53357"><tspan id="tspan124" sodipodi:role="line" x="856.59521" y="810.53357">4. ETAGE</tspan></text>
 <rect class="rect_chair" height="17.264898" id="S31" style="fill:#0000ff;fill-opacity:1" width="29.991671" x="241.48616" y="902.30273"></rect>
 <rect class="rect_chair" height="16.154892" id="S32" style="fill:#0000ff;fill-opacity:1" width="29.429277" x="241.68372" y="971.25549"></rect>
 <rect class="rect_chair" height="16.756929" id="S33" style="fill:#0000ff;fill-opacity:1" width="30.113287" x="241.31685" y="1038.7804"></rect>
