@@ -201,7 +201,7 @@ function init() {
 
 function lvlUpDown(updown) {
     let lvl = getURL(false,true,false)['lvl'];
-    if (lvl !== false && not (Number(lvl)).isNan) {
+    if (lvl !== false && !(Number(lvl)).isNan) {
         lvl = Number(lvl);
         const metadata = document.querySelector('svg > metadata');
         if (metadata) {
