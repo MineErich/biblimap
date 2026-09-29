@@ -43,18 +43,14 @@
 
         // sanitize URL-params; do AJAX
         $(document).ready(function () {
-            url = getURL(true, true, false);
-            if (url['location'] !== false && url['location'] !== null) {
-                bib = url['location'];
-            }
-            else {
+            let url = getURL(true, true, false);
+            let bib = url['location'];
+            let lvl = url['lvl'];
+            if (bib === false || bib === null) {
                 bib = "HTWK";
-                setURL("HTWK", false, false, false);
+                setURL(bib, false, false, false);
             }
-            if (url['lvl'] !== false && url['lvl'] !== null) {
-                lvl = url['lvl'];
-            }
-            else {
+            if (lvl === false || lvl === null) {
                 switch (bib) {
                     case "HTWK":
                         lvl = 0;
