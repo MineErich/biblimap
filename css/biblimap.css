@@ -95,9 +95,13 @@ button img,
 
 /* END MOBILE VERSION */
 
+.rect_chair {
+    fill: var(--pico-primary-hover)
+}
+
 /* START darkmode */
 .darkmode .wall {
-    fill: #6464b9 !important;
+    fill: var(--pico-primary-background) !important;
 }
 
 .darkmode .icons {

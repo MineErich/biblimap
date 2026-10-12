@@ -121,46 +121,46 @@
 <rect class="" height="30.458788" id="rect92" style="fill:#fecc77;fill-opacity:1" width="40.074677" x="1494.5275" y="1270.6619"></rect>
 <rect class="" height="30.698248" id="rect93" style="fill:#fecc77;fill-opacity:1" width="40.624863" x="1494.1089" y="1352.0955"></rect>
 <rect class="" height="30.79137" id="rect94" style="fill:#fecc77;fill-opacity:1" width="40.738415" x="1493.9906" y="1433.8892"></rect>
-<rect class="rect_chair" height="17.849634" id="S1" style="fill:#0000ff;fill-opacity:1" width="30.851725" x="1494.3501" y="1406.1023"></rect>
-<rect class="rect_chair" height="17.759764" id="S2" style="fill:#0000ff;fill-opacity:1" width="32.306759" x="1492.7616" y="1324.3202"></rect>
-<rect class="rect_chair" height="16.57988" id="S3" style="fill:#0000ff;fill-opacity:1" width="31.411095" x="1493.6851" y="1243.0427"></rect>
-<rect class="rect_chair" height="18.376921" id="S4" style="fill:#0000ff;fill-opacity:1" width="31.433268" x="1493.5487" y="1160.6379"></rect>
-<rect class="rect_chair" height="17.679134" id="S5" style="fill:#0000ff;fill-opacity:1" width="31.314339" x="1493.6979" y="1079.2638"></rect>
-<rect class="rect_chair" height="17.370726" id="S6" style="fill:#0000ff;fill-opacity:1" width="31.154758" x="1494.1632" y="997.52136"></rect>
-<rect class="rect_chair" height="17.823933" id="S7" style="fill:#0000ff;fill-opacity:1" width="31.763515" x="1493.5558" y="915.83716"></rect>
-<rect class="rect_chair" height="16.711575" id="S8" style="fill:#0000ff;fill-opacity:1" width="30.626295" x="1262.0994" y="738.85327"></rect>
-<rect class="rect_chair" height="17.271954" id="S9" style="fill:#0000ff;fill-opacity:1" width="30.484186" x="1262.7786" y="657.25641"></rect>
-<rect class="rect_chair" height="17.221895" id="S10" style="fill:#0000ff;fill-opacity:1" width="31.64089" x="1262.0651" y="576.02576"></rect>
-<rect class="rect_chair" height="17.564909" id="S11" style="fill:#0000ff;fill-opacity:1" width="31.030455" x="1262.4219" y="493.77271"></rect>
-<rect class="rect_chair" height="18.257318" id="S12" style="fill:#0000ff;fill-opacity:1" width="31.050276" x="1262.356" y="411.53146"></rect>
-<rect class="rect_chair" height="16.846294" id="S13" style="fill:#0000ff;fill-opacity:1" width="30.618233" x="1262.7164" y="330.76273"></rect>
-<rect class="rect_chair" height="18.063471" id="S14" style="fill:#0000ff;fill-opacity:1" width="30.450254" x="1262.5458" y="248.36089"></rect>
-<rect class="rect_chair" height="19.033718" id="S15" style="fill:#0000ff;fill-opacity:1" width="31.350958" x="1262.188" y="166.32726"></rect>
-<rect class="rect_chair" height="17.278336" id="S16" style="fill:#0000ff;fill-opacity:1" width="30.480825" x="1263.175" y="84.993088"></rect>
-<rect class="rect_chair" height="16.61911" id="S17" style="fill:#0000ff;fill-opacity:1" width="30.972389" x="771.49182" y="181.07603"></rect>
-<rect class="rect_chair" height="16.957394" id="S18" style="fill:#0000ff;fill-opacity:1" width="30.683994" x="921.64581" y="180.59427"></rect>
-<rect class="rect_chair" height="17.107531" id="S19" style="fill:#0000ff;fill-opacity:1" width="31.173365" x="921.61353" y="248.8372"></rect>
-<rect class="rect_chair" height="17.179749" id="S20" style="fill:#0000ff;fill-opacity:1" width="30.835556" x="772.22919" y="248.87569"></rect>
-<rect class="rect_chair" height="16.880899" id="S21" style="fill:#0000ff;fill-opacity:1" width="30.473516" x="771.42719" y="317.12762"></rect>
-<rect class="rect_chair" height="17.723282" id="S22" style="fill:#0000ff;fill-opacity:1" width="31.525425" x="920.89563" y="316.32138"></rect>
-<rect class="rect_chair" height="16.294605" id="S23" style="fill:#0000ff;fill-opacity:1" width="30.498697" x="922.72766" y="385.59482"></rect>
-<rect class="rect_chair" height="15.714964" id="S24" style="fill:#0000ff;fill-opacity:1" width="29.97607" x="771.98358" y="386.10699"></rect>
-<rect class="rect_chair" height="17.394976" id="S25" style="fill:#0000ff;fill-opacity:1" width="30.258764" x="772.43494" y="561.96863"></rect>
-<rect class="rect_chair" height="17.168346" id="S26" style="fill:#0000ff;fill-opacity:1" width="30.03546" x="922.37512" y="562.09314"></rect>
-<rect class="rect_chair" height="16.730288" id="S27" style="fill:#0000ff;fill-opacity:1" width="30.363289" x="772.17505" y="616.53247"></rect>
-<rect class="rect_chair" height="16.207659" id="S28" style="fill:#0000ff;fill-opacity:1" width="30.382769" x="921.83636" y="616.49493"></rect>
-<rect class="rect_chair" height="16.363022" id="S29" style="fill:#0000ff;fill-opacity:1" width="31.214224" x="921.54938" y="684.54449"></rect>
-<rect class="rect_chair" height="16.432865" id="S30" style="fill:#0000ff;fill-opacity:1" width="29.675797" x="772.57556" y="684.86902"></rect>
+<rect class="rect_chair" height="17.849634" id="S1" width="30.851725" x="1494.3501" y="1406.1023"></rect>
+<rect class="rect_chair" height="17.759764" id="S2" width="32.306759" x="1492.7616" y="1324.3202"></rect>
+<rect class="rect_chair" height="16.57988" id="S3" width="31.411095" x="1493.6851" y="1243.0427"></rect>
+<rect class="rect_chair" height="18.376921" id="S4" width="31.433268" x="1493.5487" y="1160.6379"></rect>
+<rect class="rect_chair" height="17.679134" id="S5" width="31.314339" x="1493.6979" y="1079.2638"></rect>
+<rect class="rect_chair" height="17.370726" id="S6" width="31.154758" x="1494.1632" y="997.52136"></rect>
+<rect class="rect_chair" height="17.823933" id="S7" width="31.763515" x="1493.5558" y="915.83716"></rect>
+<rect class="rect_chair" height="16.711575" id="S8" width="30.626295" x="1262.0994" y="738.85327"></rect>
+<rect class="rect_chair" height="17.271954" id="S9" width="30.484186" x="1262.7786" y="657.25641"></rect>
+<rect class="rect_chair" height="17.221895" id="S10" width="31.64089" x="1262.0651" y="576.02576"></rect>
+<rect class="rect_chair" height="17.564909" id="S11" width="31.030455" x="1262.4219" y="493.77271"></rect>
+<rect class="rect_chair" height="18.257318" id="S12" width="31.050276" x="1262.356" y="411.53146"></rect>
+<rect class="rect_chair" height="16.846294" id="S13" width="30.618233" x="1262.7164" y="330.76273"></rect>
+<rect class="rect_chair" height="18.063471" id="S14" width="30.450254" x="1262.5458" y="248.36089"></rect>
+<rect class="rect_chair" height="19.033718" id="S15" width="31.350958" x="1262.188" y="166.32726"></rect>
+<rect class="rect_chair" height="17.278336" id="S16" width="30.480825" x="1263.175" y="84.993088"></rect>
+<rect class="rect_chair" height="16.61911" id="S17" width="30.972389" x="771.49182" y="181.07603"></rect>
+<rect class="rect_chair" height="16.957394" id="S18" width="30.683994" x="921.64581" y="180.59427"></rect>
+<rect class="rect_chair" height="17.107531" id="S19" width="31.173365" x="921.61353" y="248.8372"></rect>
+<rect class="rect_chair" height="17.179749" id="S20" width="30.835556" x="772.22919" y="248.87569"></rect>
+<rect class="rect_chair" height="16.880899" id="S21" width="30.473516" x="771.42719" y="317.12762"></rect>
+<rect class="rect_chair" height="17.723282" id="S22" width="31.525425" x="920.89563" y="316.32138"></rect>
+<rect class="rect_chair" height="16.294605" id="S23" width="30.498697" x="922.72766" y="385.59482"></rect>
+<rect class="rect_chair" height="15.714964" id="S24" width="29.97607" x="771.98358" y="386.10699"></rect>
+<rect class="rect_chair" height="17.394976" id="S25" width="30.258764" x="772.43494" y="561.96863"></rect>
+<rect class="rect_chair" height="17.168346" id="S26" width="30.03546" x="922.37512" y="562.09314"></rect>
+<rect class="rect_chair" height="16.730288" id="S27" width="30.363289" x="772.17505" y="616.53247"></rect>
+<rect class="rect_chair" height="16.207659" id="S28" width="30.382769" x="921.83636" y="616.49493"></rect>
+<rect class="rect_chair" height="16.363022" id="S29" width="31.214224" x="921.54938" y="684.54449"></rect>
+<rect class="rect_chair" height="16.432865" id="S30" width="29.675797" x="772.57556" y="684.86902"></rect>
 <text class="wall" id="text124" style="font-size:26.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1" x="856.59521" xml:space="preserve" y="810.53357"><tspan id="tspan124" sodipodi:role="line" x="856.59521" y="810.53357">4. ETAGE</tspan></text>
-<rect class="rect_chair" height="17.264898" id="S31" style="fill:#0000ff;fill-opacity:1" width="29.991671" x="241.48616" y="902.30273"></rect>
-<rect class="rect_chair" height="16.154892" id="S32" style="fill:#0000ff;fill-opacity:1" width="29.429277" x="241.68372" y="971.25549"></rect>
-<rect class="rect_chair" height="16.756929" id="S33" style="fill:#0000ff;fill-opacity:1" width="30.113287" x="241.31685" y="1038.7804"></rect>
-<rect class="rect_chair" height="17.400625" id="S34" style="fill:#0000ff;fill-opacity:1" width="30.816784" x="240.32643" y="1092.8408"></rect>
-<rect class="rect_chair" height="17.556509" id="S35" style="fill:#0000ff;fill-opacity:1" width="30.261108" x="241.32222" y="1160.814"></rect>
-<rect class="rect_chair" height="16.681002" id="S36" style="fill:#0000ff;fill-opacity:1" width="32.046391" x="240.01466" y="1230.1725"></rect>
-<rect class="rect_chair" height="16.052761" id="S37" style="fill:#0000ff;fill-opacity:1" width="29.812941" x="241.57687" y="1298.6489"></rect>
-<rect class="rect_chair" height="17.840731" id="S38" style="fill:#0000ff;fill-opacity:1" width="31.084208" x="240.6503" y="1365.6874"></rect>
-<rect class="rect_chair" height="16.834871" id="S39" style="fill:#0000ff;fill-opacity:1" width="29.98428" x="241.00642" y="1433.7189"></rect>
-<rect class="rect_chair" height="17.875669" id="S40" style="fill:#0000ff;fill-opacity:1" width="31.000217" x="240.52061" y="1501.9749"></rect>
+<rect class="rect_chair" height="17.264898" id="S31" width="29.991671" x="241.48616" y="902.30273"></rect>
+<rect class="rect_chair" height="16.154892" id="S32" width="29.429277" x="241.68372" y="971.25549"></rect>
+<rect class="rect_chair" height="16.756929" id="S33" width="30.113287" x="241.31685" y="1038.7804"></rect>
+<rect class="rect_chair" height="17.400625" id="S34" width="30.816784" x="240.32643" y="1092.8408"></rect>
+<rect class="rect_chair" height="17.556509" id="S35" width="30.261108" x="241.32222" y="1160.814"></rect>
+<rect class="rect_chair" height="16.681002" id="S36" width="32.046391" x="240.01466" y="1230.1725"></rect>
+<rect class="rect_chair" height="16.052761" id="S37" width="29.812941" x="241.57687" y="1298.6489"></rect>
+<rect class="rect_chair" height="17.840731" id="S38" width="31.084208" x="240.6503" y="1365.6874"></rect>
+<rect class="rect_chair" height="16.834871" id="S39" width="29.98428" x="241.00642" y="1433.7189"></rect>
+<rect class="rect_chair" height="17.875669" id="S40" width="31.000217" x="240.52061" y="1501.9749"></rect>
 </g>
 </svg>

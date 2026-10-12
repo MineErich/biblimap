@@ -83,33 +83,33 @@
 <rect class="" height="354.89847" id="rect50" style="fill:#fecc77;fill-opacity:1" width="54.04649" x="875.16821" y="173.36502"></rect>
 <rect class="" height="23.701061" id="rect51" style="fill:#fecc77;fill-opacity:1" width="201.09306" x="803.87531" y="72.317001"></rect>
 <rect class="wall" height="29.956888" id="rect52" style="fill:#000000;fill-opacity:1" width="30.788187" x="509.56226" y="394.17734"></rect>
-<rect class="rect_chair" height="40.137299" id="S1" style="fill:#0000ff;fill-opacity:1" width="82.114876" x="379.33444" y="1102.646"></rect>
-<rect class="rect_chair" height="39.339123" id="S2" style="fill:#0000ff;fill-opacity:1" width="81.422134" x="575.23792" y="1102.3267"></rect>
-<rect class="rect_chair" height="41.634232" id="S3" style="fill:#0000ff;fill-opacity:1" width="76.919266" x="485.96359" y="996.1463"></rect>
-<rect class="rect_chair" height="39.586102" id="S4" style="fill:#0000ff;fill-opacity:1" width="79.575806" x="575.68365" y="918.5614"></rect>
-<rect class="rect_chair" height="43.34502" id="S5" style="fill:#0000ff;fill-opacity:1" width="79.943268" x="379.73502" y="916.55548"></rect>
-<rect class="rect_chair" height="26.993126" id="S6" style="fill:#0000ff;fill-opacity:1" width="70.133331" x="470.40387" y="160.72687"></rect>
-<rect class="rect_chair" height="30.002068" id="S7" style="fill:#0000ff;fill-opacity:1" width="68.636391" x="483.3884" y="210.74034"></rect>
-<rect class="rect_chair" height="66.750908" id="S8" style="fill:#0000ff;fill-opacity:1" width="31.709845" x="599.99915" y="238.94127"></rect>
-<rect class="rect_chair" height="67.600281" id="S9" style="fill:#0000ff;fill-opacity:1" width="30.414705" x="653.08484" y="225.74289"></rect>
-<rect class="rect_chair" height="30.107485" id="S10" style="fill:#0000ff;fill-opacity:1" width="67.115356" x="392.91232" y="328.58301"></rect>
-<rect class="rect_chair" height="27.059389" id="S11" style="fill:#0000ff;fill-opacity:1" width="68.823135" x="404.74628" y="382.43674"></rect>
+<rect class="rect_chair" height="40.137299" id="S1" width="82.114876" x="379.33444" y="1102.646"></rect>
+<rect class="rect_chair" height="39.339123" id="S2" width="81.422134" x="575.23792" y="1102.3267"></rect>
+<rect class="rect_chair" height="41.634232" id="S3" width="76.919266" x="485.96359" y="996.1463"></rect>
+<rect class="rect_chair" height="39.586102" id="S4" width="79.575806" x="575.68365" y="918.5614"></rect>
+<rect class="rect_chair" height="43.34502" id="S5" width="79.943268" x="379.73502" y="916.55548"></rect>
+<rect class="rect_chair" height="26.993126" id="S6" width="70.133331" x="470.40387" y="160.72687"></rect>
+<rect class="rect_chair" height="30.002068" id="S7" width="68.636391" x="483.3884" y="210.74034"></rect>
+<rect class="rect_chair" height="66.750908" id="S8" width="31.709845" x="599.99915" y="238.94127"></rect>
+<rect class="rect_chair" height="67.600281" id="S9" width="30.414705" x="653.08484" y="225.74289"></rect>
+<rect class="rect_chair" height="30.107485" id="S10" width="67.115356" x="392.91232" y="328.58301"></rect>
+<rect class="rect_chair" height="27.059389" id="S11" width="68.823135" x="404.74628" y="382.43674"></rect>
 <rect class="wall" height="28.005142" id="rect64" style="fill:#000000;fill-opacity:1" width="32.242962" x="507.15271" y="1166.7855"></rect>
-<rect class="rect_chair" height="27.179438" id="S12" style="fill:#0000ff;fill-opacity:1" width="17.244955" x="192.93674" y="1104.1237"></rect>
-<rect class="rect_chair" height="26.544043" id="S13" style="fill:#0000ff;fill-opacity:1" width="16.405205" x="259.52097" y="1104.3623"></rect>
-<rect class="rect_chair" height="28.58074" id="S14" style="fill:#0000ff;fill-opacity:1" width="16.43955" x="191.41522" y="1268.8953"></rect>
-<rect class="rect_chair" height="29.284813" id="S15" style="fill:#0000ff;fill-opacity:1" width="17.038893" x="255.25522" y="1269.0841"></rect>
-<rect class="rect_chair" height="27.983126" id="S16" style="fill:#0000ff;fill-opacity:1" width="14.985011" x="405.30624" y="1271.7545"></rect>
-<rect class="rect_chair" height="26.516565" id="S17" style="fill:#0000ff;fill-opacity:1" width="16.800179" x="548.60663" y="1271.9623"></rect>
-<rect class="rect_chair" height="27.155396" id="S18" style="fill:#0000ff;fill-opacity:1" width="16.008512" x="476.534" y="1271.4746"></rect>
-<rect class="rect_chair" height="26.885782" id="S19" style="fill:#0000ff;fill-opacity:1" width="14.670749" x="406.20782" y="1389.6511"></rect>
-<rect class="rect_chair" height="26.636776" id="S20" style="fill:#0000ff;fill-opacity:1" width="14.902581" x="484.49017" y="1389.6185"></rect>
-<rect class="rect_chair" height="26.169676" id="S21" style="fill:#0000ff;fill-opacity:1" width="15.197954" x="549.1167" y="1389.9448"></rect>
+<rect class="rect_chair" height="27.179438" id="S12" width="17.244955" x="192.93674" y="1104.1237"></rect>
+<rect class="rect_chair" height="26.544043" id="S13" width="16.405205" x="259.52097" y="1104.3623"></rect>
+<rect class="rect_chair" height="28.58074" id="S14" width="16.43955" x="191.41522" y="1268.8953"></rect>
+<rect class="rect_chair" height="29.284813" id="S15" width="17.038893" x="255.25522" y="1269.0841"></rect>
+<rect class="rect_chair" height="27.983126" id="S16" width="14.985011" x="405.30624" y="1271.7545"></rect>
+<rect class="rect_chair" height="26.516565" id="S17" width="16.800179" x="548.60663" y="1271.9623"></rect>
+<rect class="rect_chair" height="27.155396" id="S18" width="16.008512" x="476.534" y="1271.4746"></rect>
+<rect class="rect_chair" height="26.885782" id="S19" width="14.670749" x="406.20782" y="1389.6511"></rect>
+<rect class="rect_chair" height="26.636776" id="S20" width="14.902581" x="484.49017" y="1389.6185"></rect>
+<rect class="rect_chair" height="26.169676" id="S21" width="15.197954" x="549.1167" y="1389.9448"></rect>
 <text class="wall" id="text74" style="font-size:26.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1" x="890.71875" xml:space="preserve" y="1444.8737"><tspan id="tspan74" style="font-size:26.6667px" x="890.71875" y="1444.8737">AUFZUG</tspan></text>
 <text class="wall" id="text75" style="font-size:26.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1" x="772.43414" xml:space="preserve" y="652.12897"><tspan id="tspan75" x="772.43414" y="652.12897">ERDGESCHOSS</tspan></text>
 <text class="wall" id="text76" style="font-size:26.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1" x="223.1757" xml:space="preserve" y="716.8031"><tspan id="tspan76" x="223.1757" y="716.8031">WC</tspan></text>
-<rect class="rect_chair" height="38.464252" id="S22" style="fill:#0000ff;fill-opacity:1" width="40.907127" x="563.06647" y="344.64456"></rect>
-<rect class="rect_chair" height="42.476761" id="S23" style="fill:#0000ff;fill-opacity:1" width="42.167255" x="379.21237" y="146.27138"></rect>
+<rect class="rect_chair" height="38.464252" id="S22" width="40.907127" x="563.06647" y="344.64456"></rect>
+<rect class="rect_chair" height="42.476761" id="S23" width="42.167255" x="379.21237" y="146.27138"></rect>
 <text class="wall" id="text77" style="font-size:26.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1" x="898.00006" xml:space="preserve" y="341.95984"><tspan id="tspan77" style="writing-mode:tb-rl" x="635" y="250">SCHLIESSFÄCHER</tspan></text>
 <text class="wall" id="text78" style="font-size:26.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1" x="510.73816" xml:space="preserve" y="663.47021"><tspan id="tspan78" x="510.73816" y="663.47021">INFO</tspan><tspan id="tspan79" x="510.73816" y="696.80359">POINT</tspan></text>
 </g>

@@ -98,7 +98,7 @@ export function whereami(event) {
     try {
         let oldchair = getURL(false,false,true)['chair'];
         if (oldchair !== false && document.getElementById(oldchair).className["baseVal"] == "rect_chair") {
-            document.getElementById(oldchair).style.fill = "#0000ff";
+            document.getElementById(oldchair).style.fill = "var(--pico-primary-hover)";
         }
     }
     catch(err) {
@@ -109,7 +109,7 @@ export function whereami(event) {
     setURL(getURL(true,false,false)['location'],false,chair.id,false)
 
     // gewaehlten Stuhl hervorheben
-    document.getElementById(chair.id).style.fill = "#ff009b";
+    document.getElementById(chair.id).style.fill = "var(--pico-primary-focus)";
 
     // bannertext aktualisieren
     document.getElementById("location_text").innerHTML = "Sitzplatz: " + getURL(true,false,false)['location'] + ":\t" + chair.id;
@@ -169,7 +169,7 @@ export function init() {
     try {
         let chair = getURL(false,false,true)['chair'];
         if (chair !== false && document.getElementById(chair).className.baseVal == "rect_chair") {
-            document.getElementById(chair).style.fill = "#ff009b";
+            document.getElementById(chair).style.fill = "var(--pico-primary-focus)";
             document.getElementById("location_text").innerHTML = "Sitzplatz: " + getURL(true,false,false)['location'] + ":\t" + chair;
         }
     }
