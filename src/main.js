@@ -155,7 +155,7 @@ export function showErr(err_msg) {
 }
 
 export function showHelp() {
-    showErr('Mit den Buttons unten rechts kannst du Etagen hoch <img class="help_btn" src="icons/up.svg"> oder runter <img class="help_btn" src="icons/down.svg"> gehen und deine Bibliothek <img class="help_btn" src="icons/bib.svg"> auswählen. <br><br>Die blauen Vierecke repräsentieren die Sitzplätze. Klicke auf sie, um deinen Sitzplatz auszuwählen.<br><br>Oben in der Menüleiste findest du einen Button <img class="help_btn" src="icons/cp.svg">, mit dem du deinen ausgewählten Sitzplatz mit Freund*innen teilen kannst.')
+    showErr('Mit den Buttons unten kannst du Etagen hoch <img class="help_btn" src="icons/up.svg"> oder runter <img class="help_btn" src="icons/down.svg"> gehen und deine Bibliothek <img class="help_btn" src="icons/bib.svg"> auswählen. <br><br>Die pinken Vierecke repräsentieren die Sitzplätze. Klicke auf sie, um deinen Sitzplatz auszuwählen.<br><br>In der Menüleiste unten findest du einen Button <img class="help_btn" src="icons/cp.svg">, mit dem du deinen ausgewählten Sitzplatz mit Freund*innen teilen kannst.')
 }
 
 export function init() {
