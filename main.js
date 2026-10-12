@@ -247,10 +247,12 @@ function change_darkmode() {
         document.body.classList.remove("darkmode");
         localStorage.setItem("darkmode", "false");
         document.getElementById("img_dm").src = "icons/darkmode.svg";
+        document.documentElement.dataset.theme = "light";
     }
     else {
         document.body.classList.add("darkmode");
         localStorage.setItem("darkmode", "true");
         document.getElementById("img_dm").src = "icons/lightmode.svg";
+        document.documentElement.dataset.theme = "dark";
     }
 }

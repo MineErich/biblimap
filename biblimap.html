@@ -5,9 +5,9 @@
     <title>biblimap</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="main.js"></script>
-    <script src="viewbox.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pico.violet.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/biblimap.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="description" content="biblimap: teile deinen Sitzplatz mit Freund*innen. Für die Bibliotheken der HTWK und Universität Leipzig">
     <meta name="robots" content="index, follow">
@@ -35,82 +35,38 @@
     </script>
 </head>
 
-<body>
-    <script>
-        // check for darkmode
-        window.onload = restore_darkmode();
-
-        // sanitize URL-params; do AJAX
-        document.addEventListener("DOMContentLoaded", () => {
-            let url = getURL(true, true, false);
-            let bib = url['location'];
-            let lvl = url['lvl'];
-            if (bib === false || bib === null) {
-                bib = "HTWK";
-                setURL(bib, false, false, false);
-            }
-            if (lvl === false || lvl === null) {
-                switch (bib) {
-                    case "HTWK":
-                        lvl = 0;
-                        break;
-                    case "Recht I":
-                        lvl = 2;
-                        break;
-                    case "Recht II":
-                        lvl = 2;
-                        break;
-                    default:
-                        lvl = 0;
-                }
-                setURL(false, lvl, false, false);
-            }
-            fetch(`maps/${bib}/${lvl}OG.svg`)
-            .then(response => {
-                if (!response.ok) { throw response }
-                return response.text();
-            })
-            .then(response => {
-                const svgContainer = document.getElementById("svg-container");
-                svgContainer.innerHTML = "";
-                svgContainer.innerHTML = response;
-
-                // wenn Seite geladen ist init-function aufrufen
-                document.addEventListener("DOMContentLoaded", init());
-
-                // Dialog zur Bib-Auswahl definieren
-                initDialog();
-                // SVG bewegbar machen
-                initViewBox();
-                // adjust svg for lightmode / darkmode
-                set_darkmode_svg();
-            })
-            .catch(e => {
-                alert('Fehler beim Laden der SVG-Datei: Bitte prüfe, ob der Link korrekt ist. Du wirst zur Startseite zurückgeleitet.');
-                setURL("HTWK", 0, false, true);
-            })
-        });
-
-    </script>
-
-    <header class="header" id="header">
-        <a href="index.html">biblimap - teile deinen Sitzplatz</a>
-        <div class="select_seat">
-            <div id="location_text" aria-label="Anzeige des augewählten Sitzplatzes">Sitzplatz auswählen</div>
-            <a onclick="copy_share()" aria-label="Button, um ausgwählten Sitzplatz zu teilen."><img alt="copy / share" src="icons/cp.svg"></a>
-        </div>
-        <a onclick="showHelp()" aria-label="Hilfe"><img alt="Hilfestellung" src="icons/help.svg"></a>
-        <a href="https://github.com/MineErich/biblimap" target="_blank" aria-label="Link zu dem GitHub Repository dieses Projekts."><img class="gh_img" alt="Link to GitHub" src="icons/github-mark-white.svg"></a>
-        <a href="faq.html" aria-label="Link zum FAQ dieses Projekts.">FAQ</a>
-        <a onclick="change_darkmode()" aria-label="Button, um vom hellen in den dunklen Modus zu wechseln."><img id="img_dm" alt="Darkmode preferences" src="icons/darkmode.svg"></a>
+<body class="container">
+    <header>
+        <nav>
+            <ul>
+                <li><h1><a id="header_title" href="index.html">biblimap</a></h1></li>
+                <li><h3 id="header_subtitle">teile deinen Sitzplatz</h3></li>
+            </ul>
+            <ul>
+                <li id="location_text"></li>
+                <li><button id="btn_share" class="icons outline secondary" aria-label="Sitzplatz teilen."><img src="icons/cp.svg" alt="copy text"></button></li>
+                <li><button id="btn_help" class="icons outline secondary" aria-label="Hilfe"><img src="icons/help.svg" alt="help"></button></li>
+                <li>
+                    <details class="dropdown secondary">
+                        <summary>Mehr</summary>
+                        <ul dir="rtl">
+                            <li><a href="faq.html" aria-label="Link zum FAQ dieses Projekts.">FAQ</a></li>
+                            <li><a href="https://foxicle.de/datenschutzerklaerung.html" aria-label="Link zur Datenschutzseite.">Datenschutz</a></li>
+                            <li><a href="https://github.com/MineErich/biblimap" target="_blank" aria-label="Link zu dem GitHub Repository dieses Projekts.">GitHub</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><button class="outline secondary" aria-label="Button, um vom hellen in den dunklen Modus zu wechseln."><img id="img_dm" src="icons/darkmode.svg" alt="toggle darkmode"></button></li>
+            </ul>
+        </nav>
     </header>
 
     <div id="svg-container" aria-label="Hier ist der Grundriss einer Etage der ausgwählten Bibliothek zu sehen. Durch klicken auf die blauen Rechtecke im Bild, kann mensch einen Sitzplatz markieren."></div>
 
     <div id="nav" aria-label="Navigation um sich Grundrisse anderer Etagen und Bibliotheken anzeigen zu lassen.">
-        <input class="nav_btn" id="btn_up" onclick="lvlUpDown(true)" aria-label="Button, um eine Etage höher zu gehen." type="image" src="icons/up.svg">
-        <input class="nav_btn" id="btn_down" onclick="lvlUpDown(false)" aria-label="Button, um eine Etage nach unten zu gehen" type="image" src="icons/down.svg">
-        <input class="nav_btn" id="btn_sel_bib" aria-label="Button, um eine andere Bibliothek zu wählen." type="image" src="icons/bib.svg">
+        <button class="nav_btn icons" id="btn_up" aria-label="Button, um eine Etage höher zu gehen."><img src="icons/up.svg" alt="floor up"></button>
+        <button class="nav_btn icons" id="btn_down" aria-label="Button, um eine Etage nach unten zu gehen"><img src="icons/down.svg" alt="floor down"></button>
+        <button class="nav_btn icons" id="btn_sel_bib" aria-label="Button, um eine andere Bibliothek zu wählen."><img src="icons/bib.svg" alt="choose library"></button>
     </div>
 
     <dialog id="dialog_bib" aria-label="Diese Dialogbox wird geöffnet, wenn der Button zum Auswählen einer Bibliothek gedrückt wird.">
@@ -126,8 +82,8 @@
                 </label>
             </p>
             <div>
-                <button id="dialog_close" value="cancel" formmethod="dialog" aria-label="Abbrechen der Auswahl einer Bibliothek.">Cancel</button>
                 <button id="dialog_conf" value="default" aria-label="Bestätigen der Auswahl einer Bibliothek.">Confirm</button>
+                <button id="dialog_close" value="cancel" formmethod="dialog" aria-label="Abbrechen der Auswahl einer Bibliothek.">Cancel</button>
             </div>
         </form>
     </dialog>
@@ -136,6 +92,8 @@
         <p id="dia_err_txt">Hier sollte eine Fehlermeldung angezeigt werden, aber anscheinend trat ein Fehler beim verarbeiten des Fehlers auf.</p>
         <button id="dia_err_ok" value="default">OK</button>
     </dialog>
-</body>
 
+    <script type="module" src="src/biblimap.js"></script>
+
+</body>
 </html>

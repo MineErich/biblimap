@@ -1,0 +1,100 @@
+/* BEGIN VIEWBOX */
+body {
+    margin: 0;
+    overflow: hidden; /* Keine Scrollbalken */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button img, .help_btn {
+    filter: brightness(0);
+}
+
+#svg-container {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 80vh;
+}
+
+#svg1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* END VIEWBOX */
+
+/* BEGIN SIDE NAV */
+#nav {
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    display: inline-grid;
+    padding: 1vh;
+    width: fit-content;
+}
+
+.nav_btn {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #6464b980;
+    border: 2px solid #6464b9;
+    border-radius: 12px;
+    padding: 3%;
+    font-size: large;
+    height: 50px;
+    width: 50px;
+}
+
+.nav_btn:hover {
+    background-color: #6464b9;
+    color: white;
+}
+
+.nav_btn img {
+    height: "10em";
+}
+/* END SIDE NAV */
+
+.select_seat {
+    display: flex;
+    gap: 0.5rem;
+    margin-inline-end: auto;
+    padding: 0 !important;
+}
+
+.icons {
+    fill: #000000;
+}
+
+#location_text {
+    font-weight: bold;
+}
+/* END TOP NAV */
+
+/* BEGIN MOBILE VERSION */
+@media only screen and (max-width: 600px) {
+    #svg-container {
+        overflow: scroll;
+        width: 100vw;
+        height:100vh;
+    }
+    #nav {
+        bottom: 1%;
+        right: 1%;
+    }
+  }
+/* END MOBILE VERSION */
+
+/* START darkmode */
+.darkmode .wall {
+    fill: #6464b9 !important;
+}
+
+.darkmode .icons {
+    fill: #FFFFFF;
+}
+
+.darkmode button img, .darkmode .help_btn {
+    filter: brightness(100);
+}
+/* END darkmode */

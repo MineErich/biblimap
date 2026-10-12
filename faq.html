@@ -1,118 +1,105 @@
 <!DOCTYPE html>
 <html lang="de">
 
-
-<!-- 
-+++++++++++++++++++++++++++++++++++++++
-FIXME TODO: header-nav ist kaputt
-+++++++++++++++++++++++++++++++++++++++
--->
-
 <head>
     <title>biblimap - FAQ</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/landingpage.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="css/pico.violet.min.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <style>
-        /* body {
-            margin: unset;
-            overflow: unset;
-            width: 50%;
-            margin-left: 25%;
-        } */
-        details a, details a:visited {
-            color: black;
-            text-decoration: underline;
-        }
-        details a:hover {
-            color: darkgray;
-        }
-        summary:hover {
-            cursor: pointer;
-        }
-        @media only screen and (max-width: 600px) {
-            body {
-                width: 80%;
-                margin-left: 10%;
-            }
-        }
-    </style>
 </head>
 
-<body>
-    <script>window.onload = restore_darkmode();</script>
-    <header class="header" id="header_faq">
-        <a id="header_title" href="index.html">biblimap - teile deinen Sitzplatz</a>
-        <!-- <a id="header_faq" href="faq.html" aria-label="Link zum FAQ dieses Projekts.">FAQ</a> -->
-        <a href="https://foxicle.de/datenschutzerklaerung.html" aria-label="Link zur Datenschutzseite.">Datenschutz</a>
-        <a href="https://github.com/MineErich/biblimap" target="_blank" aria-label="Link zu dem GitHub Repository dieses Projekts."><img class="gh_img" alt="Link to GitHub" src="icons/github-mark-white.svg"></a>
-        <a onclick="change_darkmode()" aria-label="Button, um vom hellen in den dunklen Modus zu wechseln."><img id="img_dm" alt="Darkmode preferences" src="icons/darkmode.svg"></a>
+<body class="container">
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <h1><a id="header_title" href="index.html">biblimap</a></h1>
+                </li>
+                <li>
+                    <h3 id="header_subtitle">teile deinen Sitzplatz</h3>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <details class="dropdown">
+                        <summary>Mehr</summary>
+                        <ul dir="rtl">
+                            <li><a href="faq.html" aria-label="Link zum FAQ dieses Projekts.">FAQ</a></li>
+                            <li><a href="https://foxicle.de/datenschutzerklaerung.html"
+                                    aria-label="Link zur Datenschutzseite.">Datenschutz</a></li>
+                            <li><a href="https://github.com/MineErich/biblimap" target="_blank"
+                                    aria-label="Link zu dem GitHub Repository dieses Projekts.">GitHub</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><input id="img_dm" aria-label="Button, um vom hellen in den dunklen Modus zu wechseln." type="image"
+                        src="icons/darkmode.svg"></li>
+            </ul>
+        </nav>
     </header>
 
-    <div id="abstand_nav"></div>
+    <main>
+        <article>
+            <h1>FAQ zu Biblimap</h1>
+            <p>Biblimap ist ein kleines Tool, welches unter möglichst wenig Entwicklungsaufwand einen gewissen Nutzen erbringen soll: Die Anzeige des Sitzplatzes, auf dem mensch in der Bib sitzt.</p>
+        </article>
+        <article>
+            <h3>Fragen (und Antworten)</h3>
+            <details>
+                <summary>Warum sind nicht alle Leipziger Bibliotheken vorhanden?</summary>
+                <p>Um Grundrisse hier im Tool anzeigen zu können, braucht es.... die Grundrisse. Diese muss ich
+                    raussuchen, oder
+                    selbst erstellen. Das braucht Zeit. Eröffne gerne ein <a
+                        href="https://github.com/MineErich/biblimap/issues">Issue auf GitHub</a>, wenn du Beitragen,
+                    oder mir
+                    mitteilen willst, dass ein Grundriss fehlt.</p>
+            </details>
+            <br>
+            <details>
+                <summary>Kannst du Bibliothek XY ergänzen?</summary>
+                <p>Du kannst dazu gerne ein <a href="https://github.com/MineErich/biblimap/issues">Issue auf GitHub</a>
+                    eröffnen. Noch besser wäre es, wenn du Bibliotheken anfragen könntest, uns die Grundrisse zu geben,
+                    damit wir
+                    sie hier einbinden können.</p>
+            </details>
+            <br>
+            <details>
+                <summary>Ich habe einen Fehler gefunden!</summary>
+                <p>Bitte eröffne ein <a href="https://github.com/MineErich/biblimap/issues">Issue auf GitHub</a>, wenn
+                    es noch
+                    kein*e Andere*r gemacht hat. Danke!</p>
+            </details>
+            <br>
+            <details>
+                <summary>Folgendes Feature fehlt: XY!</summary>
+                <p>Bitte eröffne ein <a href="https://github.com/MineErich/biblimap/issues">Issue auf GitHub</a>, wenn
+                    es noch
+                    kein*e Andere*r gemacht hat. Danke!</p>
+            </details>
+            <br>
+            <details>
+                <summary>Ich möchte das Projekt für eine andere Universität / Stadt nutzen</summary>
+                <p>Auf <a href="https://github.com/MineErich/biblimap/">GitHub</a> liegt der Source Code dieses
+                    Projekts. Feel
+                    free es weiterzuverwenden. Eine gute Doku gibt es derzeit noch nicht, aber ich helfe gerne weiter.
+                </p>
+            </details>
+        </article>
+        <article>
+            <h3>Über die Implementierung</h3>
+            <p>Die Umsetzung ist sehr einfach gehalten. Keine Frameworks, keine Berechnungen im Backend. Nur HTML, CSS
+                und JavaScript auf einem Apache2-Server.</p>
+            <p>Es erfolgt auch kein Webtracking und keine Werbung, es gibt keine Cookies und keine Anfragen zu anderen
+                Servern. Toll, oder? Allerdings gibt es natürlich Logfiles auf den Servern, in welchen einige Daten
+                temporär gesammelt werden. Siehe Datenschutzerklärung.</p>
+            <p>Falls jemensch Lust hat die Nutzung von SVG-ViewBoxen zu optimieren, würde ich
+                mich freuen. Schätzungsweise sind 50% des Codes bloat und können weg.</p>
+        </article>
+    </main>
 
-    <script>
-        document.getElementById("abstand_nav").style.height = document.getElementById("header_faq").offsetHeight + "px";
-    </script>
-
-    <div class="dm_ena">
-    <h1>FAQ zu Biblimap</h1>
-    <p>Biblimap ist ein kleines Tool, welches unter möglichst wenig Entwicklungsaufwand einen gewissen Nutzen erbringen soll: Die Anzeige des Sitzplatzes, auf dem mensch in der Bib sitzt.</p>
-
-    <h3>Fragen (und Antworten)</h3>
-    <!-- 
-<details>
-    <summary></summary>
-    <p></p>
-</details>
-
-<a href="https://github.com/MineErich/biblimap/issues">Issue auf GitHub</a>
--->
-
-    <details>
-        <summary>Warum sind nicht alle Leipziger Bibliotheken vorhanden?</summary>
-        <p>Um Grundrisse hier im Tool anzeigen zu können, braucht es.... die Grundrisse. Diese muss ich raussuchen, oder
-            selbst erstellen. Das braucht Zeit. Eröffne gerne ein <a
-                href="https://github.com/MineErich/biblimap/issues">Issue auf GitHub</a>, wenn du Beitragen, oder mir
-            mitteilen willst, dass ein Grundriss fehlt.</p>
-    </details>
-    <br>
-    <details>
-        <summary>Kannst du Bibliothek XY ergänzen?</summary>
-        <p>Du kannst dazu gerne ein <a href="https://github.com/MineErich/biblimap/issues">Issue auf GitHub</a>
-            eröffnen. Noch besser wäre es, wenn du Bibliotheken anfragen könntest, uns die Grundrisse zu geben, damit wir
-            sie hier einbinden können.</p>
-    </details>
-    <br>
-    <details>
-        <summary>Ich habe einen Fehler gefunden!</summary>
-        <p>Bitte eröffne ein <a href="https://github.com/MineErich/biblimap/issues">Issue auf GitHub</a>, wenn es noch
-            kein*e Andere*r gemacht hat. Danke!</p>
-    </details>
-    <br>
-    <details>
-        <summary>Folgendes Feature fehlt: XY!</summary>
-        <p>Bitte eröffne ein <a href="https://github.com/MineErich/biblimap/issues">Issue auf GitHub</a>, wenn es noch
-            kein*e Andere*r gemacht hat. Danke!</p>
-    </details>
-    <br>
-    <details>
-        <summary>Ich möchte das Projekt für eine andere Universität / Stadt nutzen</summary>
-        <p>Auf <a href="https://github.com/MineErich/biblimap/">GitHub</a> liegt der Source Code dieses Projekts. Feel
-            free es weiterzuverwenden. Eine gute Doku gibt es derzeit noch nicht, aber ich helfe gerne weiter.</p>
-    </details>
-    <br>
-    <h3>Über die Implementierung</h3>
-    <p>Die Umsetzung ist sehr einfach gehalten. Keine Frameworks, keine Berechnungen im Backend. Nur HTML, CSS und JavaScript (leider) auf einem Apache2-Server.</p>
-    <p>Es erfolgt auch kein Webtracking und keine Werbung, es gibt keine Cookies und keine Anfragen zu anderen Servern. Toll, oder? Allerdings gibt es natürlich Logfiles auf den Servern, in welchen einige Daten temporär gesammelt werden. Siehe Datenschutzerklärung.</p>
-    <p>Falls jemensch Lust hat die jquery-Nutzung und die Nutzung von SVG-ViewBoxen zu optimieren, würde ich mich freuen. Schätzungsweise sind 50% des Codes bloat und können weg.</p>
-</div>
-<script> 
-    if (isMobile()) { document.getElementById("header_title").innerHTML = "biblimap"; } 
-</script>
+    <script type="module" src="src/faq.js"></script>
 </body>
 
 </html>

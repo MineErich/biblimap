@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="de" data-theme="light">
+<html lang="de">
 
 <head>
     <title>biblimap</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/landingpage.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/pico.violet.min.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="description"
         content="biblimap: teile deinen Sitzplatz mit Freund*innen. Für die Bibliotheken der HTWK und Universität Leipzig">
@@ -34,100 +34,54 @@
           }]
         }
     </script>
-    <script>
-        function isOpen(bib) {
-            const d = new Date();
-            let hour = d.getHours();
-            let day = d.getDay();
-            switch (bib) {
-                case "htwk": /* mo-fr 9-20 sa 9-16 */
-                    if (day <= 5 && day >= 1 && hour >= 9 && hour < 20)
-                        return true;
-                    if (day == 6 && hour >= 9 && hour < 16)
-                        return true;
-                    return false;
-
-                case "r1": /* mo-fr 8-22 sa-so 10-20 */
-                    if (day <= 5 && day >= 1 && hour >= 8 && hour < 22)
-                        return true;
-                    if ((day == 6 || day == 0) && hour >= 10 && hour < 20)
-                        return true;
-                    return false;
-
-                case "r2": /* mo-fr 8-22 sa-so 10-20 */
-                    if (day <= 5 && day >= 1 && hour >= 8 && hour < 22)
-                        return true;
-                    if ((day == 6 || day == 0) && hour >= 10 && hour < 20)
-                        return true;
-                    return false;
-            }
-        }
-        function setOpen(bib, element) {
-            if (isOpen(bib)) {
-                document.getElementById(element).innerHTML= "<img src=\"icons/check.svg\"> Geöffnet";
-            } else {
-                document.getElementById(element).innerHTML = "<img src=\"icons/nope.svg\"> Geschlossen";
-            }
-        }
-    </script>
 </head>
 
-<body>
-    <script>window.onload = restore_darkmode();</script>
-    <header class="header" id="header_lp">
-        <a id="header_title" href="index.html">biblimap - teile deinen Sitzplatz</a>
-        <a href="faq.html" aria-label="Link zum FAQ dieses Projekts.">FAQ</a>
-        <a href="https://foxicle.de/datenschutzerklaerung.html" aria-label="Link zur Datenschutzseite.">Datenschutz</a>
-        <a href="https://github.com/MineErich/biblimap" target="_blank" aria-label="Link zu dem GitHub Repository dieses Projekts."><img class="gh_img" alt="Link to GitHub" src="icons/github-mark-white.svg"></a>
-        <a onclick="change_darkmode()" aria-label="Button, um vom hellen in den dunklen Modus zu wechseln."><img id="img_dm" alt="Darkmode preferences" src="icons/darkmode.svg"></a>
+<body class="container">
+    <header>
+        <nav>
+            <ul>
+                <li><h1><a id="header_title" href="index.html">biblimap</a></h1></li>
+                <li><h3 id="header_subtitle">teile deinen Sitzplatz</h3></li>
+            </ul>
+            <ul>
+                <li>
+                    <details class="dropdown">
+                        <summary>Mehr</summary>
+                        <ul dir="rtl">
+                            <li><a href="faq.html" aria-label="Link zum FAQ dieses Projekts.">FAQ</a></li>
+                            <li><a href="https://foxicle.de/datenschutzerklaerung.html" aria-label="Link zur Datenschutzseite.">Datenschutz</a></li>
+                            <li><a href="https://github.com/MineErich/biblimap" target="_blank" aria-label="Link zu dem GitHub Repository dieses Projekts.">GitHub</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><input id="img_dm" aria-label="Button, um vom hellen in den dunklen Modus zu wechseln." type="image" src="icons/darkmode.svg"></li>
+            </ul>
+        </nav>
     </header>
 
-    <div id="abstand_nav"></div>
+    <main>
+        <article>
+            <p class="dm_ena">Teile deinen Sitzplatz mit Freund*innen.</p>
+            <p class="dm_ena">Für die Bibliothek der HTWK Leipzig sowie der Uni Leipzig Bibliotheken Recht I und Recht II.</p>
+        </article>
 
-    <script>
-        document.getElementById("abstand_nav").style.height = document.getElementById("header_lp").offsetHeight + "px";
-    </script>
-
-    <h1 class="dm_ena">biblimap</h1>
-
-    <p class="dm_ena">Teile deinen Sitzplatz mit Freund*innen.</p>
-
-    <p class="dm_ena">Für die Bibliotheken der HTWK Leipzig sowie der Uni Leipzig Bibliotheken Recht I und Recht II.</p>
-
-    <div class="grid">
-        <div id="grid_htwk" class="grid_ele">
-            <h3>HTWK</h3>
-            <p id="p_htwk"></p>
-            <script>setOpen("htwk","p_htwk");</script>
-            <p class="grid_bottom"><img src="icons/location.svg" alt="location-needle">Gustav-Freytag-Straße 40 - 04277 Leipzig</p>
+        <div class="grid">
+            <div id="grid_htwk" class="grid_ele">
+                <h3>HTWK</h3>
+                <p id="p_htwk"></p>
+                <p class="grid_bottom"><img src="icons/location.svg" alt="location-needle">Gustav-Freytag-Straße 40 - 04277 Leipzig</p>
+            </div>
+            <div id="grid_r1" class="grid_ele">
+                <h3>Recht I</h3>
+                <p id="p_r1"></p>
+                <p class="grid_bottom"><img src="icons/location.svg" alt="location-needle">Burgstr. 27 - 04109 Leipzig</p>
+            </div>
+            <div id="grid_r2" class="grid_ele">
+                <h3>Recht II</h3>
+                <p id="p_r2"></p>
+                <p class="grid_bottom"><img src="icons/location.svg" alt="location-needle">Burgstr. 21 - 04109 Leipzig</p>
+            </div>
         </div>
-        <div id="grid_r1" class="grid_ele">
-            <h3>Recht I</h3>
-            <p id="p_r1"></p>
-            <script>setOpen("r1","p_r1");</script>
-            <p class="grid_bottom"><img src="icons/location.svg" alt="location-needle">Burgstr. 27 - 04109 Leipzig</p>
-        </div>
-        <div id="grid_r2" class="grid_ele">
-            <h3>Recht II</h3>
-            <p id="p_r2"></p>
-            <script>setOpen("r2","p_r2");</script>
-            <p class="grid_bottom"><img src="icons/location.svg" alt="location-needle">Burgstr. 21 - 04109 Leipzig</p>
-        </div>
-
-    </div>
-    <script>
-        document.getElementById("grid_htwk").addEventListener("click", function() {
-            window.location.href = 'biblimap.html?location=HTWK&lvl=0';
-        });
-        document.getElementById("grid_r1").addEventListener("click", function() {
-                window.location.href = 'biblimap.html?location=Recht+I&lvl=2';
-        });
-        document.getElementById("grid_r2").addEventListener("click", function() {
-            window.location.href = 'biblimap.html?location=Recht+II&lvl=2';
-        });
-
-        if (isMobile()) {
-            document.getElementById("header_title").innerHTML = "";
-        }
-    </script>
+        <script type="module" src="src/landingpage.js"></script>
+    </main>
 </body>
