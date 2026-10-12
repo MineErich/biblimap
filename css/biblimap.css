@@ -1,14 +1,15 @@
-/* BEGIN VIEWBOX */
 body {
     margin: 0;
-    overflow: hidden; /* Keine Scrollbalken */
+    overflow: hidden;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-button img, .help_btn {
+button img,
+.help_btn {
     filter: brightness(0);
 }
 
+/* BEGIN VIEWBOX */
 #svg-container {
     position: absolute;
     left: 0;
@@ -21,16 +22,32 @@ button img, .help_btn {
     top: 0;
     left: 0;
 }
+
 /* END VIEWBOX */
 
-/* BEGIN SIDE NAV */
-#nav {
+.select_seat {
+    display: flex;
+    gap: 0.5rem;
+    margin-inline-end: auto;
+    padding: 0 !important;
+}
+
+.icons {
+    fill: #000000;
+}
+
+#location_text {
+    font-weight: bold;
+}
+
+/* END TOP NAV */
+
+/* START FOOTER */
+.bottom-nav {
     position: fixed;
-    right: 5%;
-    bottom: 10%;
-    display: inline-grid;
-    padding: 1vh;
-    width: fit-content;
+    bottom: 0;
+    background-color: var(--pico-accordion-border-color);
+    border-radius: 25px 25px 0px 0px;
 }
 
 .nav_btn {
@@ -53,36 +70,29 @@ button img, .help_btn {
 .nav_btn img {
     height: "10em";
 }
-/* END SIDE NAV */
 
-.select_seat {
-    display: flex;
-    gap: 0.5rem;
-    margin-inline-end: auto;
-    padding: 0 !important;
-}
+/* END FOOTER */
 
-.icons {
-    fill: #000000;
-}
-
-#location_text {
-    font-weight: bold;
-}
-/* END TOP NAV */
 
 /* BEGIN MOBILE VERSION */
 @media only screen and (max-width: 600px) {
     #svg-container {
         overflow: scroll;
         width: 100vw;
-        height:100vh;
+        height: 100vh;
     }
-    #nav {
-        bottom: 1%;
-        right: 1%;
+
+    .bottom-nav {
+        left: 0;
     }
-  }
+}
+
+@media only screen and (max-width: 390px) {
+    #nav_top {
+        display: unset;
+    }
+}
+
 /* END MOBILE VERSION */
 
 /* START darkmode */
@@ -94,7 +104,9 @@ button img, .help_btn {
     fill: #FFFFFF;
 }
 
-.darkmode button img, .darkmode .help_btn {
+.darkmode button img,
+.darkmode .help_btn {
     filter: brightness(100);
 }
+
 /* END darkmode */

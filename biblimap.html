@@ -37,15 +37,14 @@
 
 <body class="container">
     <header>
-        <nav>
+        <nav aria-labelledby="primary-navigation" id="nav_top">
             <ul>
                 <li><h1><a id="header_title" href="index.html">biblimap</a></h1></li>
                 <li><h3 id="header_subtitle">teile deinen Sitzplatz</h3></li>
             </ul>
             <ul>
-                <li id="location_text"></li>
-                <li><button id="btn_share" class="icons outline secondary" aria-label="Sitzplatz teilen."><img src="icons/cp.svg" alt="copy text"></button></li>
                 <li><button id="btn_help" class="icons outline secondary" aria-label="Hilfe"><img src="icons/help.svg" alt="help"></button></li>
+                <li><button class="outline secondary" aria-label="Button, um vom hellen in den dunklen Modus zu wechseln."><img id="img_dm" src="icons/darkmode.svg" alt="toggle darkmode"></button></li>
                 <li>
                     <details class="dropdown secondary">
                         <summary>Mehr</summary>
@@ -56,17 +55,24 @@
                         </ul>
                     </details>
                 </li>
-                <li><button class="outline secondary" aria-label="Button, um vom hellen in den dunklen Modus zu wechseln."><img id="img_dm" src="icons/darkmode.svg" alt="toggle darkmode"></button></li>
             </ul>
         </nav>
     </header>
 
     <div id="svg-container" aria-label="Hier ist der Grundriss einer Etage der ausgwählten Bibliothek zu sehen. Durch klicken auf die blauen Rechtecke im Bild, kann mensch einen Sitzplatz markieren."></div>
 
-    <div id="nav" aria-label="Navigation um sich Grundrisse anderer Etagen und Bibliotheken anzeigen zu lassen.">
-        <button class="nav_btn icons" id="btn_up" aria-label="Button, um eine Etage höher zu gehen."><img src="icons/up.svg" alt="floor up"></button>
-        <button class="nav_btn icons" id="btn_down" aria-label="Button, um eine Etage nach unten zu gehen"><img src="icons/down.svg" alt="floor down"></button>
-        <button class="nav_btn icons" id="btn_sel_bib" aria-label="Button, um eine andere Bibliothek zu wählen."><img src="icons/bib.svg" alt="choose library"></button>
+    <div class="bottom-nav container">
+        <nav aria-labelledby="footer-navigation">
+            <ul></ul>
+            <ul>
+                <li id="location_text"></li>
+                <li><button class="nav_btn icons" id="btn_share" aria-label="Sitzplatz teilen."><img src="icons/cp.svg" alt="copy text"></button></li>
+                <li><button class="nav_btn icons" id="btn_up" aria-label="Button, um eine Etage höher zu gehen."><img src="icons/up.svg" alt="floor up"></button></li>
+                <li><button class="nav_btn icons" id="btn_down" aria-label="Button, um eine Etage nach unten zu gehen"><img src="icons/down.svg" alt="floor down"></button></li>
+                <li><button class="nav_btn icons" id="btn_sel_bib" aria-label="Button, um eine andere Bibliothek zu wählen."><img src="icons/bib.svg" alt="choose library"></button></li>
+            </ul>
+            <ul></ul>
+        </nav>
     </div>
 
     <dialog id="dialog_bib" aria-label="Diese Dialogbox wird geöffnet, wenn der Button zum Auswählen einer Bibliothek gedrückt wird.">
