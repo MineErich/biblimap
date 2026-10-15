@@ -76,9 +76,11 @@ export function copy_share() {
             // copy-funktion
             navigator.clipboard.writeText(text + " - " + url.href).then(() => {
                 console.log('copied location');
-                document.getElementById('location_text').style.backgroundColor = 'green';
+                const btnBgColor = document.getElementById('btn_share').style.backgroundColor;
+                document.getElementById('btn_share').style.backgroundColor = 'green';
                 setTimeout(() => {
-                    document.getElementById('location_text').style.backgroundColor = 'unset';
+                    document.getElementById('btn_share').style.backgroundColor = btnBgColor;
+                    document.getElementById('btn_share').blur();
                 }, 1000);
               },() => {
                 console.error('Failed to copy');
