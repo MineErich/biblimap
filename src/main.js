@@ -100,7 +100,7 @@ export function whereami(event) {
     try {
         let oldchair = getURL(false,false,true)['chair'];
         if (oldchair !== false && document.getElementById(oldchair).className["baseVal"] == "rect_chair") {
-            document.getElementById(oldchair).style.fill = "var(--pico-primary-hover)";
+            document.getElementById(oldchair).style.fill = "";
         }
     }
     catch(err) {
@@ -112,6 +112,7 @@ export function whereami(event) {
 
     // gewaehlten Stuhl hervorheben
     document.getElementById(chair.id).style.fill = "var(--pico-primary-focus)";
+    placeMarker("svg1", chair.id);
 
     // bannertext aktualisieren
     document.getElementById("location_text").innerHTML = "Sitzplatz: " + getURL(true,false,false)['location'] + ":\t" + chair.id;
